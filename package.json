@@ -1,0 +1,44 @@
+{
+  "name": "nedb-repl",
+  "version": "1.0.0",
+  "description": "The command-line tool for NeDB",
+  "license": "MIT",
+  "repository": "nikolassilva/nedb-repl",
+  "author": "Nikolas Silva <nikolas.rsilva@gmail.com>",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "bin": {
+    "nedb": "bin/nedb"
+  },
+  "scripts": {
+    "test": "ava",
+    "lint": "eslint bin/nedb lib/**/*.js test/**/*.js --cache"
+  },
+  "keywords": [
+    "nedb",
+    "repl",
+    "cli",
+    "terminal",
+    "database",
+    "nosql"
+  ],
+  "dependencies": {
+    "cardinal": "^1.0.0",
+    "chalk": "^1.1.3",
+    "circular-json": "^0.3.1",
+    "deasync": "^0.1.7",
+    "meow": "^3.7.0",
+    "nedb": "1.8.0",
+    "ramda": "^0.22.1",
+    "vm2": "^3.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0"
+  }
+}
