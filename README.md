@@ -15,13 +15,14 @@ npm install -g nedb-repl
 ```
 
 ## Usage
+To open a datastore file, use:
 ```bash
-$ nedb --help
+$ nedb foo.db
 ```
 
-Inside the REPL, the datastore namespace is attached to `db` global property.
+Inside the REPL, the datastore namespace is attached to the `db` global property.
 
-You can display the database you're using by typing:
+You can display the datastore you're using by typing:
 ```bash
 nedb> db.filename
 foo.db
@@ -49,8 +50,7 @@ Opened file bar.db
 ```
 If the filename is not specified, the datastore is set to in-memory only.
 
-You can see other commands by typing `.help`.
-
+You can see other REPL commands by typing `.help`.
 
 ## License
 MIT © [Nikolas Silva](http://nikolas.com.br)
