@@ -1,6 +1,6 @@
 {
   "name": "nedb-repl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The command-line tool for NeDB",
   "license": "MIT",
   "repository": "nikolassilva/nedb-repl",
