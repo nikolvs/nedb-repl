@@ -12,8 +12,7 @@
     "nedb": "bin/nedb"
   },
   "scripts": {
-    "test": "ava",
-    "lint": "eslint bin/nedb lib/**/*.js test/**/*.js --cache"
+    "test": "eslint .; ava"
   },
   "keywords": [
     "nedb",
