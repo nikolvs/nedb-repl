@@ -1,12 +1,16 @@
 import test from 'ava';
 import datastore from '../lib/datastore';
 
-const db = datastore();
 const data = [
   { a: 1 },
   { a: 2 },
   { a: 3 },
 ];
+
+let db;
+test.before(async () => {
+  db = await datastore();
+});
 
 test('should insert a document', (t) => {
   const doc = db.insert(data[0]);
