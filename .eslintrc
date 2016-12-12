@@ -1,6 +1,6 @@
 {
   "extends": "airbnb",
   "rules": {
-    "no-console": ["error", { allow: ["log"] }]
+    "no-console": 0
   }
 }
