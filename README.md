@@ -52,5 +52,10 @@ If the filename is not specified, the datastore is set to in-memory only.
 
 You can see other REPL commands by typing `.help`.
 
+## Changelog
+
+### 1.1.0
+  - Automatically reload datastore when it changes
+
 ## License
 MIT © [Nikolas Silva](http://nikolas.com.br)
