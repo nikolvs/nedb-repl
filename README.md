@@ -54,6 +54,9 @@ You can see other REPL commands by typing `.help`.
 
 ## Changelog
 
+### 1.2.0
+  - Automatically execute cursors (no need to put `.exec()` in the final of each query)
+
 ### 1.1.0
   - Automatically reload datastore when it changes
 
