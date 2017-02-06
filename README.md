@@ -37,9 +37,9 @@ nedb> db.insert([ { a: 1 }, { a: 2 } ])
 
 Query methods usually returns the cursor, not the data. To return the data you should use the `exec` method.
 ```bash
-nedb> db.find({ a: 1 }).exec()
+nedb> db.find({ a: 1 })
 {"a":1,"_id":"Kkui4fblZ5kqkmc8"}
-nedb> db.count().exec()
+nedb> db.count()
 2
 ```
 
