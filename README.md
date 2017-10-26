@@ -3,9 +3,9 @@
 
 ![](terminal.gif)
 
-[![Build Status](https://travis-ci.org/nikolassilva/nedb-repl.svg)](https://travis-ci.org/nikolassilva/nedb-repl)
-[![Dependency Status](https://david-dm.org/nikolassilva/nedb-repl.svg)](https://david-dm.org/nikolassilva/nedb-repl)
-[![devDependency Status](https://david-dm.org/nikolassilva/nedb-repl/dev-status.svg)](https://david-dm.org/nikolassilva/nedb-repl#info=devDependencies)
+[![Build Status](https://travis-ci.org/nikolvs/nedb-repl.svg)](https://travis-ci.org/nikolvs/nedb-repl)
+[![Dependency Status](https://david-dm.org/nikolvs/nedb-repl.svg)](https://david-dm.org/nikolvs/nedb-repl)
+[![devDependency Status](https://david-dm.org/nikolvs/nedb-repl/dev-status.svg)](https://david-dm.org/nikolvs/nedb-repl#info=devDependencies)
 
 This is an interactive interface to query and update data, like MongoDB Shell, but for NeDB.
 
@@ -33,10 +33,6 @@ To perform queries and other operations, you can use the well-known NeDB datasto
 nedb> db.insert([ { a: 1 }, { a: 2 } ])
 {"a":1,"_id":"Kkui4fblZ5kqkmc8"},
 {"a":2,"_id":"9ptV45vIEbBparvA"}
-```
-
-Query methods usually returns the cursor, not the data. To return the data you should use the `exec` method.
-```bash
 nedb> db.find({ a: 1 })
 {"a":1,"_id":"Kkui4fblZ5kqkmc8"}
 nedb> db.count()
