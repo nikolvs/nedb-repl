@@ -70,7 +70,7 @@ test('should update documents w/ `a` field greater than 1', (t) => {
   const countUpdates = db.update(
     { a: { $gt: 1 } },
     { a: 4 },
-    { multi: true }
+    { multi: true },
   );
 
   t.is(countUpdates, data.filter(d => d.a > 1).length);
