@@ -27,7 +27,6 @@
     "chalk": "^2.3.0",
     "chokidar": "^1.6.1",
     "circular-json": "^0.4.0",
-    "deasync": "^0.1.7",
     "meow": "^3.7.0",
     "nedb": "1.8.0",
     "ramda": "^0.25.0",

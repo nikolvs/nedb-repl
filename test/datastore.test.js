@@ -12,16 +12,16 @@ test.before(async () => {
   db = await datastore();
 });
 
-test('should insert a document', (t) => {
-  const doc = db.insert(data[0]);
+test.serial('should insert a document', async (t) => {
+  const doc = await db.insert(data[0]);
 
   t.is(doc.a, data[0].a);
   t.true('_id' in doc);
 });
 
-test('should insert two documents', (t) => {
+test.serial('should insert two documents', async (t) => {
   const arr = data.slice(1);
-  const docs = db.insert(arr);
+  const docs = await db.insert(arr);
 
   docs.forEach((doc, index) => {
     t.is(doc.a, arr[index].a);
@@ -29,8 +29,8 @@ test('should insert two documents', (t) => {
   });
 });
 
-test('should find all documents', (t) => {
-  const docs = db.find({}).exec();
+test.serial('should find all documents', async (t) => {
+  const docs = await db.find({}).exec();
 
   if (docs.length !== data.length) {
     t.fail();
@@ -42,8 +42,8 @@ test('should find all documents', (t) => {
   });
 });
 
-test('should find all documents keeping only the `a` field', (t) => {
-  const docs = db
+test.serial('should find all documents keeping only the `a` field', async (t) => {
+  const docs = await db
     .find({}, { a: 1, _id: 0 })
     .sort({ a: 1 })
     .exec();
@@ -51,23 +51,23 @@ test('should find all documents keeping only the `a` field', (t) => {
   t.deepEqual(docs, data);
 });
 
-test('should find one document', (t) => {
-  const doc = db.findOne({ a: 3 }).exec();
+test.serial('should find one document', async (t) => {
+  const doc = await db.findOne({ a: 3 }).exec();
   t.is(doc.a, data[2].a);
 });
 
-test('should count documents', (t) => {
-  const count = db.count({}).exec();
+test.serial('should count documents', async (t) => {
+  const count = await db.count({}).exec();
   t.is(count, data.length);
 });
 
-test('should update a document', (t) => {
-  const countUpdates = db.update({ a: 1 }, { a: 0 });
+test.serial('should update a document', async (t) => {
+  const countUpdates = await db.update({ a: 1 }, { a: 0 });
   t.is(countUpdates, 1);
 });
 
-test('should update documents w/ `a` field greater than 1', (t) => {
-  const countUpdates = db.update(
+test.serial('should update documents w/ `a` field greater than 1', async (t) => {
+  const countUpdates = await db.update(
     { a: { $gt: 1 } },
     { a: 4 },
     { multi: true },
@@ -76,12 +76,12 @@ test('should update documents w/ `a` field greater than 1', (t) => {
   t.is(countUpdates, data.filter(d => d.a > 1).length);
 });
 
-test('should remove a document', (t) => {
-  const countRemoved = db.remove({ a: 0 });
+test.serial('should remove a document', async (t) => {
+  const countRemoved = await db.remove({ a: 0 });
   t.is(countRemoved, 1);
 });
 
-test('should remove all documents', (t) => {
-  const countRemoved = db.remove({}, { multi: true });
+test.serial('should remove all documents', async (t) => {
+  const countRemoved = await db.remove({}, { multi: true });
   t.is(countRemoved, data.length - 1);
 });

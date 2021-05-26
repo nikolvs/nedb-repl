@@ -741,10 +741,6 @@ binary-search-tree@0.2.5:
   dependencies:
     underscore "~1.4.4"
 
-bindings@~1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.2.1.tgz#14ad6113812d2d37d72e67b4cacb4bb726505f11"
-
 block-stream@*:
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/block-stream/-/block-stream-0.0.9.tgz#13ebfe778a03205cfe03751481ebb4b3300c126a"
@@ -1110,13 +1106,6 @@ date-time@^2.1.0:
   resolved "https://registry.yarnpkg.com/date-time/-/date-time-2.1.0.tgz#0286d1b4c769633b3ca13e1e62558d2dbdc2eba2"
   dependencies:
     time-zone "^1.0.0"
-
-deasync@^0.1.7:
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/deasync/-/deasync-0.1.10.tgz#4e4a6836fbe0477bd5f908308bd2a96557d5d7fe"
-  dependencies:
-    bindings "~1.2.1"
-    nan "^2.0.7"
 
 debug@^2.2.0, debug@^2.6.8:
   version "2.6.9"
@@ -2506,7 +2495,7 @@ mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
-nan@^2.0.7, nan@^2.3.0:
+nan@^2.3.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.7.0.tgz#d95bf721ec877e08db276ed3fc6eb78f9083ad46"
 
