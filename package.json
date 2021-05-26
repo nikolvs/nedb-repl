@@ -23,10 +23,10 @@
     "nosql"
   ],
   "dependencies": {
-    "cardinal": "^1.0.0",
-    "chalk": "^2.3.0",
-    "chokidar": "^1.6.1",
+    "cardinal": "^2.1.1",
+    "chalk": "^4.1.1",
     "circular-json": "^0.4.0",
+    "gaze": "^1.1.3",
     "meow": "^3.7.0",
     "nedb": "1.8.0",
     "ramda": "^0.25.0",
