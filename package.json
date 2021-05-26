@@ -1,12 +1,12 @@
 {
   "name": "nedb-repl",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "The command-line tool for NeDB",
   "license": "MIT",
   "repository": "nikolvs/nedb-repl",
   "author": "Nikolas Silva <nikolas.rsilva@gmail.com>",
   "engines": {
-    "node": ">= 6.0.0"
+    "node": ">= 14.0.0"
   },
   "bin": {
     "nedb": "bin/nedb"
